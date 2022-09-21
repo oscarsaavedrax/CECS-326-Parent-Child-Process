@@ -14,18 +14,17 @@ int main(int argc, char** argv)
 	
 	//Print the aruments as gender-name pairs
 	for (int i = 1; i < argc; i += 2)
-		cout << argv[i] << " " << argv[i+1] << endl;
-	cout << endl;
-	
-	// Create n-number of child processes
-	for(int i = 0; i < number_children; i++)
 	{
+		cout << argv[i] << " " << argv[i+1] << endl;
+		// Create n children processes
 		if(fork() == 0)
 		{
 			cout << "son pid " << getpid() << endl;
 			exit(0);
 		}
 	}
+	cout << endl;
+
 	// Parent process waits for children and terminates at the end
 	for(int i = 0; i < number_children; i++)
 		wait(NULL);
