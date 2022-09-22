@@ -1,3 +1,10 @@
+/**********************************************************************
+ * Programmer	: Oscar Saavedra
+ * Class	: CECS 326-01
+ * Due Date	: September 22, 2022
+ * Description	: This child program takes in an integer, a gender, and
+ * 	a name through command line arguments and displays them back.
+ **********************************************************************/
 #include <iostream>
 
 using namespace std;
