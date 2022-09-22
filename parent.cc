@@ -11,11 +11,11 @@ int main(int argc, char** argv)
 	
 	//Print number of children
 	cout << "I have " << number_children << " children." << endl;
-	
+		
 	//Print the aruments as gender-name pairs
-	for (int i = 1; i < argc; i += 2)
+	for (int i = 0; i < number_children; i++)
 	{
-		cout << argv[i] << " " << argv[i+1] << endl;
+		cout << (i+1) << ": " << argv[i+1] << " " << argv[i+2] << endl;
 		// Create n children processes
 		if(fork() == 0)
 		{
